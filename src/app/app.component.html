@@ -1,0 +1,37 @@
+<div class="container mt-2">
+  <p>Wallet Address: {{ walletAddress }}</p>
+  <p>Chain Id: {{ chainId }}</p>
+  <p>Contract Address: {{ contractAddress }}</p>
+  <p>Contract Name: {{ contractName }}</p>
+  <p>Wallet Balance: {{ walletBalance }}</p>
+  <p>Token Symbol: {{ tokenSymbol }}</p>
+  <p>Token Decimals: {{ tokenDecimal }}</p>
+  <p>Token Balance: {{ tokenBalance }} {{ tokenSymbol }}</p>
+
+  <button type="button" class="btn btn-primary" (click)="connect()">
+    Connect your wallet
+  </button>
+  <br /><br />
+  <form class="form-inline d-flex" [formGroup]="mintForm">
+    <button type="button" class="btn btn-success" id="mint" (click)="mint()">Mint Token</button>
+    <div class="form-group mx-sm-3">
+      <input type="text" class="form-control" id="receiver-address" placeholder="Receiver Address"
+        formControlName="receiverAddress">
+    </div>
+    <div class="form-group mx-sm-3">
+      <input type="number" class="form-control" id="mint-amount" placeholder="Amount" formControlName="amount">
+    </div>
+  </form>
+  <br />
+  <form class="form-inline d-flex" [formGroup]="transferForm">
+    <button type="button" class="btn btn-success" id="mint" (click)="transfer()">Transfer Token</button>
+    <div class="form-group mx-sm-3">
+      <input type="text" class="form-control" id="receiver-address" placeholder="Receiver Address"
+        formControlName="receiverAddress">
+    </div>
+    <div class="form-group mx-sm-3">
+      <input type="number" class="form-control" id="transfer-amount" placeholder="Amount" formControlName="amount">
+    </div>
+  </form>
+  <br />
+</div>
