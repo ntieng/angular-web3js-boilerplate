@@ -11,10 +11,6 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-
-@Injectable({
-  providedIn: 'root'
-})
 export class Web3Service {
   public accountsObservable = new Subject<string[]>();
   web3Modal;
@@ -67,7 +63,6 @@ export class Web3Service {
       }
     });
   }
-
 
   async connectAccount() {
     this.provider = await this.web3Modal.connect(); // set provider
